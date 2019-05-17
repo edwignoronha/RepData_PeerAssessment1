@@ -184,7 +184,8 @@ abline(v=maxInt,lwd=2,col=&quot;purple&quot;)</code></pre>
 <pre class="r"><code>summary(data$steps)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 ##    0.00    0.00    0.00   37.38   12.00  806.00    2304</code></pre>
-<p>There are <strong>2304</strong> NA values as seen in the summary above</p>
+<p>There are <strong>2304</strong> NA values as seen in the summary above.<br />
+I have used the average for every 5 minute interval across all days to impute missing values.</p>
 <pre class="r"><code>imputedData&lt;-data
 imputedData&lt;-merge(imputedData,intervalAverage , by=&quot;interval&quot;)
 imputedData$steps = ifelse(is.na(imputedData$steps),imputedData$avg,imputedData$steps)

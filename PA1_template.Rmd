@@ -54,7 +54,8 @@ abline(v=maxInt,lwd=2,col="purple")
 ```{R}
 summary(data$steps)
 ```
-There are **2304** NA values as seen in the summary above
+There are **2304** NA values as seen in the summary above.  
+I have used the average for every 5 minute interval across all days to impute missing values.
 ```{R}
 imputedData<-data
 imputedData<-merge(imputedData,intervalAverage , by="interval")

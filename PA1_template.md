@@ -123,7 +123,8 @@ summary(data$steps)
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 ##    0.00    0.00    0.00   37.38   12.00  806.00    2304
 ```
-There are **2304** NA values as seen in the summary above
+There are **2304** NA values as seen in the summary above.  
+I have used the average for every 5 minute interval across all days to impute missing values.
 
 ```r
 imputedData<-data
